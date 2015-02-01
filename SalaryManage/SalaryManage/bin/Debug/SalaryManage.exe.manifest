@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="SalaryManage.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="Resources\App.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="SalaryManage" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="SalaryManage.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" ID="Custom" SameSite="site">
+          <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Read="USERNAME" />
+          <IPermission class="System.Security.Permissions.FileDialogPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+          <IPermission class="System.Security.Permissions.IsolatedStorageFilePermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Allowed="AssemblyIsolationByUser" UserQuota="9223372036854775807" Expiry="9223372036854775807" Permanent="True" />
+          <IPermission class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="ReflectionEmit" />
+          <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="Assertion, Execution, BindingRedirects" />
+          <IPermission class="System.Security.Permissions.UIPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+          <IPermission class="System.Net.DnsPermission, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+          <IPermission class="System.Drawing.Printing.PrintingPermission, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Level="DefaultPrinting" />
+          <IPermission class="System.Security.Permissions.MediaPermission, WindowsBase, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" version="1" Audio="SafeAudio" Video="SafeVideo" Image="SafeImage" />
+          <IPermission class="System.Security.Permissions.WebBrowserPermission, WindowsBase, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" version="1" Level="Safe" />
+        </PermissionSet>
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Data.Entity" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IrisSkin2.dll" size="516096">
+      <assemblyIdentity name="IrisSkin2" version="2006.3.22.45" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>YbPfG6n5qeR1Yv7YQVSZOJ9Hr+4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SalaryManage.exe" size="2676736">
+      <assemblyIdentity name="SalaryManage" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>p/Up0eWOIWhYWNifrh758dktGHQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Resources\App.ico" size="67646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>3WG6j9sXqN/AmC/9ojet/J8RkRA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SalaryManage.exe.config" size="407">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qESVARVEzNESU7+n8hqcmAuCc0I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Carlmness\calmness.gif" size="33729">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>WvLKiMqYvdWPeeH20w7dNlNBkzU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Carlmness\calmness_color1.gif" size="40436">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5fSw7tW/GL5BQPjwDHSJPM95LtA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Carlmness\calmness_color2.gif" size="50601">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ZyiPAKIccqhiuvC/w+AZfJsINIk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Deep\deepcyan.gif" size="18221">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HyQQGiRkTONVZv9GHneWSOy67p0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Deep\deepgreen.gif" size="17920">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jIgrMDEOiQf+jI10TITQD5PD9AU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Deep\deeporange.gif" size="20292">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gwFb3QDFec9UuxstsGuoT8lIEoM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Diamond\diamondblue.gif" size="50635">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>SQ7sDZU9wyNNq0VNH1Ltj+JGvbI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Diamond\diamondgreen.gif" size="45088">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>c2lR2L6P7NnaG8qAO/fTOKidbYE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Eighteen\eighteen.gif" size="33870">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QeytiHCJNjcLMtOBeTIhCu1bR+Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Eighteen\eighteen_color1.gif" size="34043">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>s5dwwwf5KVKOrY6BHfj+1lk+lv4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Eighteen\eighteen_color2.gif" size="34065">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QkvPH1tQsR/ZOGhTTpg7wa6aqU4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Emerald\emerald.gif" size="41715">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Lmdz2TLUxLaBaDfgb1rsHF2TBgM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Emerald\emerald_color1.gif" size="32006">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>sk6+isGQsaV9E4QuSqaf4UsUjE0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Emerald\emerald_color2.gif" size="35959">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gWLfQkIJDFWlrKv6dfbUpkcAhsA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Emerald\emerald_color3.gif" size="48642">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XHjf0j+5rgRAylLQHUC6pxrZBmA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Glass\glassbrown.gif" size="22373">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PNOMafM8QutDCHOTrlbYK0334aI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Glass\glassgreen.gif" size="21490">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>3Vy13roFNaXpmwPsbWppf3X+D+E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Glass\glassorange.gif" size="29540">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/qpYKMlZEwHNcUVUtcKLfzxNMrM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Longhorn\longhorn.gif" size="30153">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>IYYPlfCZT2zcxUrrC5d2dxxnxKg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\MacOS\macos.gif" size="35567">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>WAA4hmmQ4AnsTBhhpIY1JX9FDUU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Midsummer\midsummer.gif" size="50781">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>m78m/01CpIVYjWGRGCDQIjGywdQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Midsummer\midsummer_color1.gif" size="24570">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>FXHbKidUsTSQI/MdgYigSxuB1AM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Midsummer\midsummer_color2.gif" size="24639">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HidQmAnM5OB6n25cK9YXD6Gauz4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Midsummer\midsummer_color3.gif" size="29986">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>CBUbfSo6ZLpAWhzuQWiU7gbYFBY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\MP10\mp10.gif" size="48102">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>F+xp39iDgHhto0hgG6UCYUuCyZk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\MSN\msn.gif" size="31443">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nf+TbRGP1qb7eT+bEE1dhfCGLvg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\One\oneblue.gif" size="28488">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hJmbQAhb8QV7ZzkR3lYWpv4Gi4w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\One\onecyan.gif" size="26443">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>pn6nQm9Mr/CHj88Oxtgfsz1AS+g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\One\onegreen.gif" size="29889">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>MTpvrQu5OIzSTkHHOHtWfkb1jcw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\One\oneorange.gif" size="32830">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/tKBnBaGdcVyfWfviXCmVjttkcw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Page\page.gif" size="33946">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zP1jGhENNeKPx+xGrmcxSp2q+d8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Page\page_color1.gif" size="24111">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>pI46vxFKzsA0swNljhsHMoyYZeg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Page\page_color2.gif" size="41804">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>AXwtcdFwREaYLsuhM0QDZkFGcs0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\RealOne\realone.gif" size="38594">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nYFhU5fDI1BtBdw2V83zRCsNARk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Silver\silver.gif" size="25275">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lVv3ySLCTlCom6KR4befrP6+ezU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Silver\silver_color1.gif" size="44150">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>d/395vJ2yvSCemBLeP3TMJbLIgw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Silver\silver_color2.gif" size="48277">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>wLYeBihwVcnAwuiWdwatKMeP4u0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Sports\sportsblack.gif" size="22183">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nFgZqt3V5411HejnExyXEdyUvms=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Sports\sportsblue.gif" size="31440">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>9yUWMOuygYVD3JIKCuOfHlCD6JA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Sports\sportscyan.gif" size="37778">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xrBv2geQoJ6At9LYguU0+HuQ2KA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Sports\sportsgreen.gif" size="34643">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Rq/hpuQ/kx6Zx2y/lfCrM8HMt64=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Sports\sportsorange.gif" size="17160">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0k0H2tdbSla+VaKRWeXy3rq0md4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Steel\steelblack.gif" size="86219">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>SC1pA9FR2SD66QHXKwN3c2aMYl4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Steel\steelblue.gif" size="85809">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Nonsx09Yhcbi0SMYU/qDLM7D9B4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Vista1\vista1.gif" size="36131">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>But9eFNH5pbPRl98v2LtsP7VPiQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Vista1\vista1_green.gif" size="35782">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8omo/telJzhy0diGAN+iHg4oDCg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Vista2\vista2_color1.gif" size="25804">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lompgfI5GcoLLu+a7ffoVG6LpOI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Vista2\vista2_color2.gif" size="24118">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>K55ZzOz+eq4/ABXaTHst85gXqT8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Vista2\vista2_color3.gif" size="28557">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>OBL430biWxP/Jpu/6o+gsreK8Cc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Vista2\vista2_color4.gif" size="26744">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>CR3Rkp0oVBc9MJLpRDEM51fPAAo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Vista2\vista2_color5.gif" size="25835">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NXyrTsdNbaDmugDge9HN4DUUMHY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Vista2\vista2_color6.gif" size="24436">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HiRH1jDf+OvbZYDwJhCxzXnv4R0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Vista2\vista2_color7.gif" size="25452">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8Odyag+E66ORCwIICF23HAIkSf4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Warm\warm.gif" size="49567">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>RFQf57Ht/qeHA+61PlQefSRGIvk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Warm\warm_color1.gif" size="41685">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NCNVdg1dP7mhwKh57CNA35TCI+U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Warm\warm_color2.gif" size="45569">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>YFDuIR6HyEaZca2AHXBBe8S8iJY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Warm\warm_color3.gif" size="38061">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>1C9xTsAN7DVYTvsyZCskC/2JyD8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Wave\wave.gif" size="52479">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GWsnbigYzLZTFoGhWm7YFyUtmzk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Wave\wave_color1.gif" size="48066">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>9QiAcvO5h7SZybFb1caXEm86414=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\Wave\wave_color2.gif" size="45376">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>omfsdzoj6W3hUXwoUIv9jtAJelg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\WinXP\xpblue.gif" size="54854">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QJFeP17dMMcCfws6szPlptZaC2Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\WinXP\xpgreen.gif" size="41486">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Wms8E9FcOlvVtM7ZzIffe0BNdPg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\WinXP\xporange.gif" size="35265">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zAJQneJc8Xnx4U6U3jtGr+TbQMs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Skins\ssk\WinXP\xpsilver.gif" size="32103">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ScMkTlp57jjmByambICiaeXdo/0=</dsig:DigestValue>
+    </hash>
+  </file>
+</asmv1:assembly>

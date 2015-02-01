@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SalaryManage.ProjectAddFrm" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CICACGBAhSAUAIkTEAigAEAGQAAgAAAAAAhAACKQDAA=</HashCode>
+      <FileName>ProjectAddFrm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SalaryManage.StaffAddFrm" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GBIgAQQJASEQApEKwAGxIEIWAMAvACgAaQFsQADgLAc=</HashCode>
+      <FileName>StaffAddFrm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SalaryManage.MainForm" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gYiFjAUCSGASIpAwY4i2BQhHAAgfzHhEAQWCIQIIABA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SalaryManage.Program" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SalaryManage.Utility" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAkAAIAAAAACAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Utility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SalaryManage.DBConecte.Dbaccess" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgACgAAAAAFhAAAAAAQAAQgAAhBCiAAAAQChBAAAAA=</HashCode>
+      <FileName>DBConecte\Dbaccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SalaryManage.Methods.Corps" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAEAAAgAAgAAAAACAEAAAAAAQJCAACJACAAAAA=</HashCode>
+      <FileName>Methods\Corps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SalaryManage.Methods.Person" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAIgAAAAIABAGAAGIAAAAABAkAAQIgAQEACCFACAA=</HashCode>
+      <FileName>Methods\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SalaryManage.Methods.Projects" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAgCAAACAAAAAAgBkAABAIIAAEAAEBAAQA=</HashCode>
+      <FileName>Methods\Projects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SalaryManage.Properties.Resources" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MBIBAAGEgEAIMAQCAEMBEQwAQSQQAAoAwBEMQHKgAIc=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SalaryManage.Properties.Settings" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAIAAAAAABAAAAAACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SalaryManage.UserAuthorize" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAQAA=</HashCode>
+      <FileName>Utility.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SalaryManage.FLAG" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAQAAAAAACIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SalaryManage.OpreatType" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAgACAAA=</HashCode>
+      <FileName>Utility.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

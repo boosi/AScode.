@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CCCE1139-F561-4071-A911-040E1019A1A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SalaryManage</RootNamespace>
+    <AssemblyName>SalaryManage</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SalaryManage.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1779ACA5DB57AEAD66D785AA2C4A5FA6EE5C81EB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SalaryManage_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin2, Version=2006.3.22.45, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Skins\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompanyAddFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyAddFrm.Designer.cs">
+      <DependentUpon>CompanyAddFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProDataset.cs" />
+    <Compile Include="ProjectAddFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectAddFrm.Designer.cs">
+      <DependentUpon>ProjectAddFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConecte\Dbaccess.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Methods\Corps.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Methods\Projects.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Methods\Person.cs" />
+    <Compile Include="StaffAddFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffAddFrm.Designer.cs">
+      <DependentUpon>StaffAddFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="CompanyAddFrm.resx">
+      <DependentUpon>CompanyAddFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectAddFrm.resx">
+      <DependentUpon>ProjectAddFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffAddFrm.resx">
+      <DependentUpon>StaffAddFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="bin\Debug\SkinAll\Calmness.ssk" />
+    <None Include="bin\Debug\SkinAll\CalmnessColor1.ssk" />
+    <None Include="bin\Debug\SkinAll\CalmnessColor2.ssk" />
+    <None Include="bin\Debug\SkinAll\DeepCyan.ssk" />
+    <None Include="bin\Debug\SkinAll\DeepGreen.ssk" />
+    <None Include="bin\Debug\SkinAll\DeepOrange.ssk" />
+    <None Include="bin\Debug\SkinAll\DiamondBlue.ssk" />
+    <None Include="bin\Debug\SkinAll\DiamondGreen.ssk" />
+    <None Include="bin\Debug\SkinAll\Eighteen.ssk" />
+    <None Include="bin\Debug\SkinAll\EighteenColor1.ssk" />
+    <None Include="bin\Debug\SkinAll\EighteenColor2.ssk" />
+    <None Include="bin\Debug\SkinAll\GlassBrown.ssk" />
+    <None Include="bin\Debug\SkinAll\GlassGreen.ssk" />
+    <None Include="bin\Debug\SkinAll\GlassOrange.ssk" />
+    <None Include="bin\Debug\SkinAll\Longhorn.ssk" />
+    <None Include="bin\Debug\SkinAll\MacOS.ssk" />
+    <None Include="bin\Debug\SkinAll\Midsummer.ssk" />
+    <None Include="bin\Debug\SkinAll\MidsummerColor1.ssk" />
+    <None Include="bin\Debug\SkinAll\MidsummerColor2.ssk" />
+    <None Include="bin\Debug\SkinAll\MidsummerColor3.ssk" />
+    <None Include="bin\Debug\SkinAll\MP10.SSK" />
+    <None Include="bin\Debug\SkinAll\MSN.SSK" />
+    <None Include="bin\Debug\SkinAll\OneBlue.ssk" />
+    <None Include="bin\Debug\SkinAll\OneCyan.ssk" />
+    <None Include="bin\Debug\SkinAll\OneGreen.ssk" />
+    <None Include="bin\Debug\SkinAll\OneOrange.ssk" />
+    <None Include="bin\Debug\SkinAll\Page.ssk" />
+    <None Include="bin\Debug\SkinAll\PageColor1.ssk" />
+    <None Include="bin\Debug\SkinAll\PageColor2.ssk" />
+    <None Include="bin\Debug\SkinAll\RealOne.ssk" />
+    <None Include="bin\Debug\SkinAll\Silver.ssk" />
+    <None Include="bin\Debug\SkinAll\SilverColor1.ssk" />
+    <None Include="bin\Debug\SkinAll\SilverColor2.ssk" />
+    <None Include="bin\Debug\SkinAll\SportsBlack.ssk" />
+    <None Include="bin\Debug\SkinAll\SportsBlue.ssk" />
+    <None Include="bin\Debug\SkinAll\SportsCyan.ssk" />
+    <None Include="bin\Debug\SkinAll\SportsGreen.ssk" />
+    <None Include="bin\Debug\SkinAll\SportsOrange.ssk" />
+    <None Include="bin\Debug\SkinAll\SteelBlack.ssk" />
+    <None Include="bin\Debug\SkinAll\SteelBlue.ssk" />
+    <None Include="bin\Debug\SkinAll\VISTA1.SSK" />
+    <None Include="bin\Debug\SkinAll\vista1_green.ssk" />
+    <None Include="bin\Debug\SkinAll\Vista2_color1.ssk" />
+    <None Include="bin\Debug\SkinAll\Vista2_color2.ssk" />
+    <None Include="bin\Debug\SkinAll\Vista2_color3.ssk" />
+    <None Include="bin\Debug\SkinAll\Vista2_color4.ssk" />
+    <None Include="bin\Debug\SkinAll\Vista2_color5.ssk" />
+    <None Include="bin\Debug\SkinAll\Vista2_color6.ssk" />
+    <None Include="bin\Debug\SkinAll\Vista2_color7.ssk" />
+    <None Include="bin\Debug\SkinAll\Warm.ssk" />
+    <None Include="bin\Debug\SkinAll\WarmColor1.ssk" />
+    <None Include="bin\Debug\SkinAll\WarmColor2.ssk" />
+    <None Include="bin\Debug\SkinAll\WarmColor3.ssk" />
+    <None Include="bin\Debug\SkinAll\Wave.ssk" />
+    <None Include="bin\Debug\SkinAll\WaveColor1.ssk" />
+    <None Include="bin\Debug\SkinAll\WaveColor2.ssk" />
+    <None Include="bin\Debug\SkinAll\XPBlue.ssk" />
+    <None Include="bin\Debug\SkinAll\XPGreen.ssk" />
+    <None Include="bin\Debug\SkinAll\XPOrange.ssk" />
+    <None Include="bin\Debug\SkinAll\XPSilver.ssk" />
+    <None Include="Properties\DataSources\SalaryManage.Data.ProDataset.datasource" />
+    <None Include="Properties\DataSources\Utility.datasource" />
+    <None Include="SalaryManageClassDiagram.cd" />
+    <None Include="PersonnelDB.tdb" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Skins\ssk\Carlmness\Calmness.ssk" />
+    <None Include="Skins\ssk\Carlmness\CalmnessColor1.ssk" />
+    <None Include="Skins\ssk\Carlmness\CalmnessColor2.ssk" />
+    <None Include="Skins\ssk\Deep\DeepCyan.ssk" />
+    <None Include="Skins\ssk\Deep\DeepGreen.ssk" />
+    <None Include="Skins\ssk\Deep\DeepOrange.ssk" />
+    <None Include="Skins\ssk\Diamond\DiamondBlue.ssk" />
+    <None Include="Skins\ssk\Diamond\DiamondGreen.ssk" />
+    <None Include="Skins\ssk\Eighteen\Eighteen.ssk" />
+    <None Include="Skins\ssk\Eighteen\EighteenColor1.ssk" />
+    <None Include="Skins\ssk\Eighteen\EighteenColor2.ssk" />
+    <None Include="Skins\ssk\Emerald\Emerald.ssk" />
+    <None Include="Skins\ssk\Emerald\EmeraldColor1.ssk" />
+    <None Include="Skins\ssk\Emerald\EmeraldColor2.ssk" />
+    <None Include="Skins\ssk\Emerald\EmeraldColor3.ssk" />
+    <None Include="Skins\ssk\Glass\GlassBrown.ssk" />
+    <None Include="Skins\ssk\Glass\GlassGreen.ssk" />
+    <None Include="Skins\ssk\Glass\GlassOrange.ssk" />
+    <None Include="Skins\ssk\Longhorn\Longhorn.ssk" />
+    <None Include="Skins\ssk\MacOS\MacOS.ssk" />
+    <None Include="Skins\ssk\Midsummer\Midsummer.ssk" />
+    <None Include="Skins\ssk\Midsummer\MidsummerColor1.ssk" />
+    <None Include="Skins\ssk\Midsummer\MidsummerColor2.ssk" />
+    <None Include="Skins\ssk\Midsummer\MidsummerColor3.ssk" />
+    <None Include="Skins\ssk\MP10\MP10.ssk" />
+    <None Include="Skins\ssk\MSN\MSN.ssk" />
+    <None Include="Skins\ssk\One\OneBlue.ssk" />
+    <None Include="Skins\ssk\One\OneCyan.ssk" />
+    <None Include="Skins\ssk\One\OneGreen.ssk" />
+    <None Include="Skins\ssk\One\OneOrange.ssk" />
+    <None Include="Skins\ssk\Page\Page.ssk" />
+    <None Include="Skins\ssk\Page\PageColor1.ssk" />
+    <None Include="Skins\ssk\Page\PageColor2.ssk" />
+    <None Include="Skins\ssk\RealOne\RealOne.ssk" />
+    <None Include="Skins\ssk\Silver\Silver.ssk" />
+    <None Include="Skins\ssk\Silver\SilverColor1.ssk" />
+    <None Include="Skins\ssk\Silver\SilverColor2.ssk" />
+    <None Include="Skins\ssk\Sports\SportsBlack.ssk" />
+    <None Include="Skins\ssk\Sports\SportsBlue.ssk" />
+    <None Include="Skins\ssk\Sports\SportsCyan.ssk" />
+    <None Include="Skins\ssk\Sports\SportsGreen.ssk" />
+    <None Include="Skins\ssk\Sports\SportsOrange.ssk" />
+    <None Include="Skins\ssk\Steel\SteelBlack.ssk" />
+    <None Include="Skins\ssk\Steel\SteelBlue.ssk" />
+    <None Include="Skins\ssk\Vista1\vista1.ssk" />
+    <None Include="Skins\ssk\Vista1\vista1_green.ssk" />
+    <None Include="Skins\ssk\Vista2\Vista2_color1.ssk" />
+    <None Include="Skins\ssk\Vista2\Vista2_color2.ssk" />
+    <None Include="Skins\ssk\Vista2\Vista2_color3.ssk" />
+    <None Include="Skins\ssk\Vista2\Vista2_color4.ssk" />
+    <None Include="Skins\ssk\Vista2\Vista2_color5.ssk" />
+    <None Include="Skins\ssk\Vista2\Vista2_color6.ssk" />
+    <None Include="Skins\ssk\Vista2\Vista2_color7.ssk" />
+    <None Include="Skins\ssk\Warm\Warm.ssk" />
+    <None Include="Skins\ssk\Warm\WarmColor1.ssk" />
+    <None Include="Skins\ssk\Warm\WarmColor2.ssk" />
+    <None Include="Skins\ssk\Warm\WarmColor3.ssk" />
+    <None Include="Skins\ssk\Wave\Wave.ssk" />
+    <None Include="Skins\ssk\Wave\WaveColor1.ssk" />
+    <None Include="Skins\ssk\Wave\WaveColor2.ssk" />
+    <None Include="Skins\ssk\WinXP\XPBlue.ssk" />
+    <None Include="Skins\ssk\WinXP\XPGreen.ssk" />
+    <None Include="Skins\ssk\WinXP\XPOrange.ssk" />
+    <None Include="Skins\ssk\WinXP\XPSilver.ssk" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Male.png" />
+    <None Include="Resources\Tips.png" />
+    <None Include="Resources\Security.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\prohibited.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\Add.png" />
+    <None Include="Resources\Backward.png" />
+    <None Include="Resources\Chat.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\Download.png" />
+    <None Include="Resources\Fav-Alt.png" />
+    <None Include="Resources\Fav.png" />
+    <None Include="Resources\Forward.png" />
+    <None Include="Resources\Halt.png" />
+    <None Include="Resources\Help.png" />
+    <None Include="Resources\Home.png" />
+    <None Include="Resources\Info.png" />
+    <None Include="Resources\Movie.png" />
+    <None Include="Resources\Music.png" />
+    <None Include="Resources\Restart.png" />
+    <None Include="Resources\RSS.png" />
+    <None Include="Resources\Select.png" />
+    <None Include="Resources\Shutdown.png" />
+    <None Include="Resources\Smiley.png" />
+    <None Include="Resources\Stats.png" />
+    <None Include="Resources\Sys.png" />
+    <None Include="Resources\Tools.png" />
+    <None Include="Resources\Upload.png" />
+    <None Include="Resources\User.png" />
+    <None Include="Resources\Settings.png" />
+    <None Include="Resources\iPhone.png" />
+    <None Include="Resources\Key.png" />
+    <None Include="Resources\Padlock.png" />
+    <None Include="Resources\Spreadsheet2.png" />
+    <None Include="Resources\System-Binary.png" />
+    <None Include="Resources\Office_DOC.png" />
+    <None Include="Resources\Office_TXT.png" />
+    <None Include="Resources\Office_XLS.png" />
+    <None Include="Resources\Image_JPG.png" />
+    <None Include="Resources\Image_PNG.png" />
+    <None Include="Resources\Steam.png" />
+    <None Include="Resources\trash_full.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\ControlPanel.png" />
+    <None Include="Resources\App.ico" />
+    <Content Include="Skins\ssk\Carlmness\calmness.gif" />
+    <Content Include="Skins\ssk\Carlmness\calmness_color1.gif" />
+    <Content Include="Skins\ssk\Carlmness\calmness_color2.gif" />
+    <Content Include="Skins\ssk\Deep\deepcyan.gif" />
+    <Content Include="Skins\ssk\Deep\deepgreen.gif" />
+    <Content Include="Skins\ssk\Deep\deeporange.gif" />
+    <Content Include="Skins\ssk\Diamond\diamondblue.gif" />
+    <Content Include="Skins\ssk\Diamond\diamondgreen.gif" />
+    <Content Include="Skins\ssk\Eighteen\eighteen.gif" />
+    <Content Include="Skins\ssk\Eighteen\eighteen_color1.gif" />
+    <Content Include="Skins\ssk\Eighteen\eighteen_color2.gif" />
+    <Content Include="Skins\ssk\Emerald\emerald.gif" />
+    <Content Include="Skins\ssk\Emerald\emerald_color1.gif" />
+    <Content Include="Skins\ssk\Emerald\emerald_color2.gif" />
+    <Content Include="Skins\ssk\Emerald\emerald_color3.gif" />
+    <Content Include="Skins\ssk\Glass\glassbrown.gif" />
+    <Content Include="Skins\ssk\Glass\glassgreen.gif" />
+    <Content Include="Skins\ssk\Glass\glassorange.gif" />
+    <Content Include="Skins\ssk\Longhorn\longhorn.gif" />
+    <Content Include="Skins\ssk\MacOS\macos.gif" />
+    <Content Include="Skins\ssk\Midsummer\midsummer.gif" />
+    <Content Include="Skins\ssk\Midsummer\midsummer_color1.gif" />
+    <Content Include="Skins\ssk\Midsummer\midsummer_color2.gif" />
+    <Content Include="Skins\ssk\Midsummer\midsummer_color3.gif" />
+    <Content Include="Skins\ssk\MP10\mp10.gif" />
+    <Content Include="Skins\ssk\MSN\msn.gif" />
+    <Content Include="Skins\ssk\One\oneblue.gif" />
+    <Content Include="Skins\ssk\One\onecyan.gif" />
+    <Content Include="Skins\ssk\One\onegreen.gif" />
+    <Content Include="Skins\ssk\One\oneorange.gif" />
+    <Content Include="Skins\ssk\Page\page.gif" />
+    <Content Include="Skins\ssk\Page\page_color1.gif" />
+    <Content Include="Skins\ssk\Page\page_color2.gif" />
+    <Content Include="Skins\ssk\RealOne\realone.gif" />
+    <Content Include="Skins\ssk\Silver\silver.gif" />
+    <Content Include="Skins\ssk\Silver\silver_color1.gif" />
+    <Content Include="Skins\ssk\Silver\silver_color2.gif" />
+    <Content Include="Skins\ssk\Sports\sportsblack.gif" />
+    <Content Include="Skins\ssk\Sports\sportsblue.gif" />
+    <Content Include="Skins\ssk\Sports\sportscyan.gif" />
+    <Content Include="Skins\ssk\Sports\sportsgreen.gif" />
+    <Content Include="Skins\ssk\Sports\sportsorange.gif" />
+    <Content Include="Skins\ssk\Steel\steelblack.gif" />
+    <Content Include="Skins\ssk\Steel\steelblue.gif" />
+    <Content Include="Skins\ssk\Vista1\vista1.gif" />
+    <Content Include="Skins\ssk\Vista1\vista1_green.gif" />
+    <Content Include="Skins\ssk\Vista2\vista2_color1.gif" />
+    <Content Include="Skins\ssk\Vista2\vista2_color2.gif" />
+    <Content Include="Skins\ssk\Vista2\vista2_color3.gif" />
+    <Content Include="Skins\ssk\Vista2\vista2_color4.gif" />
+    <Content Include="Skins\ssk\Vista2\vista2_color5.gif" />
+    <Content Include="Skins\ssk\Vista2\vista2_color6.gif" />
+    <Content Include="Skins\ssk\Vista2\vista2_color7.gif" />
+    <Content Include="Skins\ssk\Warm\warm.gif" />
+    <Content Include="Skins\ssk\Warm\warm_color1.gif" />
+    <Content Include="Skins\ssk\Warm\warm_color2.gif" />
+    <Content Include="Skins\ssk\Warm\warm_color3.gif" />
+    <Content Include="Skins\ssk\Wave\wave.gif" />
+    <Content Include="Skins\ssk\Wave\wave_color1.gif" />
+    <Content Include="Skins\ssk\Wave\wave_color2.gif" />
+    <Content Include="Skins\ssk\WinXP\xpblue.gif" />
+    <Content Include="Skins\ssk\WinXP\xpgreen.gif" />
+    <Content Include="Skins\ssk\WinXP\xporange.gif" />
+    <Content Include="Skins\ssk\WinXP\xpsilver.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
